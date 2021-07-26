@@ -1,0 +1,278 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,800&display=swap");
+
+*{
+    font-family: Poppins, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    --border-color: #0347537c;
+    color: white;
+}
+
+body{
+    height: 100vh;
+    background-image: url("/WeatherAPI/MEDIA/bg.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body::before{
+    content: '';
+    position: absolute;
+    background: rgba(59, 17, 17, 0.322);
+    width: 100vw;
+    height: 100vh;
+}
+div{
+    // border: 1px solid black;
+
+}
+
+.mobile{
+    background: rgba(255, 255, 255, 0.178);
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 20px );
+    -webkit-backdrop-filter: blur( 10.0px );
+    border-radius: 25px;
+    border: 2px solid rgba(255, 255, 255, 0.26);
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    // border: 1px solid #0347535b;
+
+    height: 750px;
+    width: 400px;
+    // border-radius: 30px;
+    overflow: hidden;
+    // border: 2px solid var(--border-color);
+}
+
+.add-form{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    // border: 1px solid #0347535b;
+    height: 40px;
+    margin-top: 30px;
+    width: 85%;
+    // overflow: hidden;
+    
+    input{
+        height: 40px;
+        width: 85%;
+        padding-left: 1em;
+        color: #ffffff;
+        // text-shadow: 0 0 2px #312d67a8;
+        font-weight: 600;
+        letter-spacing: 2px;
+        
+        border: none;
+        
+        background: rgba(255, 255, 255, 0.171);
+        // box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+        backdrop-filter: blur( 20px );
+        -webkit-backdrop-filter: blur( 6.0px );
+        border-radius: 6px;
+        border: 2px solid rgba(255, 255, 255, 0.26);
+    }
+
+    input::placeholder{
+        color: #fff;
+        // text-shadow: 0 0 2px #312d67a8;
+        font-weight: 600;
+    }
+    
+    button{
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        font-size: 2em;
+        font-weight: 400;
+        // color: #ffffff;
+
+        background: rgba(255, 255, 255, 0.171);
+        // box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );           
+        backdrop-filter: blur( 20px );
+        -webkit-backdrop-filter: blur( 6.0px );
+        border-radius: 6px;
+        border: 2px solid rgba(255, 255, 255, 0.26);
+
+        width: 38px;
+        height: 40px;
+        transition: all 0.1s ease-in;
+    }
+
+    button:hover{
+        background: rgba(255, 255, 255, 0.664);
+        color: #312d67bd;
+    }
+}
+
+.title{
+    margin-top: 35px;
+    width: 85%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #312D67;
+    // text-shadow: 0 0 2px #312d67a8;
+    font-weight: 400;
+    letter-spacing: 2px;
+    // border-bottom: 1px solid #312D67;
+    
+    i{
+        // text-shadow: 0 0 3px #312d67d8;
+        font-size: 20px;
+    }
+    
+    .location{
+        margin-left: 10px;
+        
+    }
+}
+
+.main-info{
+    
+    display: flex;
+    flex-direction: column;
+    // flex-direction: column;
+    align-items: center;
+    
+    margin-top: 30px;
+    height: 350px;
+    width: 85%;
+
+    color: #312d67a8;
+    // text-shadow: 0 0 2px #312d67a8;
+    font-weight: 400;
+    letter-spacing: 2px;
+    
+    img{
+        margin-top: -30px;
+        width: 170px;
+        filter: drop-shadow(0 10px 20px #03536186)    
+    }
+    
+    .description{
+        letter-spacing: 2px;
+        font-weight: 400;
+    }
+    
+    .temperature{
+        // margin-top: -10px;
+        // text-shadow: 0 0 5px #312d67dc;
+        // font-family: sans-serif;
+        font-size: 90px;
+        font-weight: 500;
+    }
+
+    .small-details{
+        // margin-top: -15px;
+        width: max-content;
+        display: flex;
+        // justify-content: space-around;
+        color: #312d6734;
+
+    }
+    .wind{
+        margin-right: 10px;
+        display: flex;
+        align-items: center;
+
+        i{
+            margin-right: 5px;
+        }
+    }
+    
+    .rain{
+        display: flex;
+        align-items: center;
+
+        i{
+            margin: 5px;
+        }
+    }
+    
+}
+
+.upper-screen{
+    // border-top: 2px solid rgba(255, 255, 255, 0.26);
+    border-radius: 30px 30px 0 0;
+    // box-shadow: 0 -10px 30px #03475338;
+    width: 100%;
+    height: 250px;
+    display: flex;
+    // justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    
+    .details{
+        width: 100%;
+        height: 125px;
+        
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+        color: #312d676b;
+        // text-shadow: 0 0 2px #312d676b;
+        font-weight: 400;
+        letter-spacing: 2px;
+        
+        .detail-child{
+            background: rgba(255, 255, 255, 0.13);
+            box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+            backdrop-filter: blur( 20px );
+            -webkit-backdrop-filter: blur( 6.0px );
+            border-radius: 10px;
+            border: 2px solid rgba(255, 255, 255, 0.26);
+
+            width: 165px;
+            height: 90px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .top-left{
+            margin-right: 10px;
+        }
+
+        .top-right{
+            margin-left: 10px;
+        }
+        
+        .bottom-left{
+            margin-right: 10px;
+        }
+
+        .bottom-right{
+            margin-left: 10px;
+        }
+
+        .num{
+            font-size: 25px;
+            // color: #312d67da;
+        }
+    }
+
+    .top{
+        align-items: flex-end;
+        margin-bottom: 10px;
+    }
+    
+    .bottom{
+        align-items: flex-start;
+        margin-top: 10px;
+    }
+}
+
